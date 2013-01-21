@@ -1,0 +1,125 @@
+<html>
+	<head>
+		<title>jPop Up</title>
+		<style type="text/css">
+			body {
+				margin: 20px;
+				font: 12px/18px 'arial';
+			}
+			ul {
+				padding: 0
+			}
+			#menu li {
+				float: left
+			}
+			.showpop {
+				margin-right: 10px;
+				border-radius: 7px;
+				color: #fff;
+				background-color: #222;
+				padding: 5px 10px;
+				text-decoration: none;
+			}
+			.jPopContainer {
+			}
+			.jPopup {
+				padding: 10px;
+				border: 1px solid #777;
+				background: #ddd;
+				color: #222;
+				border-radius: 10px;
+				width: 350px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>jPop Up v.0.1</h1>
+		<p>
+			Author: Tony Bispo Pinheiro aka Tony Pine
+		</p>
+		<h2>Usage:</h2> 
+		<p>
+			$('.container').jPopup( params );
+		</p>
+		<p>
+			<strong>Params</strong> (default):
+			<br />
+			<code>
+				{ <br />
+                    linkClass: '.showpop',<br />
+                    popupClass: '.jPopup',<br />
+                    popEl: false,<br />
+                    event: 'mouseover',<br />
+                    top: 25,<br />
+                    left: 0,<br />
+                    delayTime: 2000,<br />
+				}
+			</code>
+		</p>
+		<p>
+			The activeClass is the class for styling the placeholder text.
+		</p>
+		<h2>Requirements:</h2>
+		<p>
+			<strong>JQuery</strong> and <strong>Modernizr</strong>.
+		</p>
+		<h2>Example:</h2>
+		<h2>Hover:</h2>
+		<code>
+			$('.jPopup-container').jPopup();
+		</code>
+		<br />
+		<ul id="menu">
+			<li>
+				<div class="jPopup-container">
+					<a class="showpop" href="#">Show Pop UP</a>
+					<div class="jPopup">
+						<strong>Pop UP</strong>
+						<input type="text" placeholder="Digite seu email." />
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						</p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="jPopup-container">
+					<a class="showpop" href="#2">Show Pop UP 2</a>
+					<div class="jPopup">
+						<strong>Pop UP 2 </strong>
+						<input type="text" placeholder="Digite seu nome." />
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<br />
+		<h2>Click:</h2>
+		<code>
+			$('.btnShow').jPopup({
+				popEl : '#tooltip',
+				event : 'click'
+			});
+		</code>
+		<br />
+		<input class="btnShow" type="button" value='show' />
+		<div id="tooltip">
+			<h2>Lorem Ipsum-Ipsum</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</p>
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+		<script src="jPopup.min.0.1.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$('.jPopup-container').jPopup();
+			$('.btnShow').jPopup({
+				popEl : '#tooltip',
+				event : 'click'
+			});
+		</script>
+	</body>
+</html>
